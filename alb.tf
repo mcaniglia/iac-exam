@@ -41,13 +41,6 @@ resource "aws_lb" "load-balancer" {
   }
 }
 
-# locals {
-#   target_groups = [
-#     "green",
-#     "blue",
-#   ]
-# }
-
 resource "aws_lb_target_group" "target-group" {
   count = "2"
 

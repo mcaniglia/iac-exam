@@ -24,7 +24,6 @@ resource "aws_instance" "apache" {
   user_data                   = "${file("apache.sh")}"
   key_name                    = "test"
 
-  # references security group created above
   vpc_security_group_ids = ["${aws_security_group.security-group.id}"]
 
   tags = {
